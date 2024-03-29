@@ -47,6 +47,19 @@ section h2 {
     height: auto;
 }
 
+.project-details {
+    display: none;
+}
+
+.project-details.show {
+    display: block;
+}
+
+header nav ul li a.active {
+    font-weight: bold;
+}
+
+
 footer {
     background-color: #333;
     color: #fff;
