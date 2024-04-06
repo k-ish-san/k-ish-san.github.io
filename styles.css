@@ -19,8 +19,8 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: green;
+    color: white;
     padding: 10px 0;
 }
 
@@ -57,8 +57,8 @@ nav ul li a {
 }
 
 footer {
-    background: #333;
-    color: #fff;
+    background: green;
+    color: white;
     text-align: center;
     padding: 10px 0;
 }
