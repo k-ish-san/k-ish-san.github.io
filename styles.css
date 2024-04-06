@@ -20,14 +20,16 @@ body {
 }
 
 header {
-    background: Black;
-    font-size: 40px;
+    background: white;
     color: white;
     padding: 10px 0;
 }
 
 header h1 {
     float: left;
+    color: black;
+    font-size: 30px;
+    position: sticky;
 }
 
 nav ul {
@@ -59,7 +61,7 @@ nav ul li a {
 }
 
 footer {
-    background: green;
+    background: black;
     color: white;
     text-align: center;
     padding: 10px 0;
