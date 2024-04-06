@@ -28,7 +28,7 @@ header {
 
 header h1 {
     float: left;
-    color: black;
+    color: white;
     font-size: 30px;
     position: sticky;
 }
