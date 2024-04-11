@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     background-color: silver;
     background-image: url("OIP.jpg");
+    background-repeat: no repeat;
     color: white;
     text-shadow: 1.5px 1.5px grey;
    
