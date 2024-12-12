@@ -2,30 +2,90 @@ body, h1, h2, h3, h4, h5, h6 {
     font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: darkgray;
+    background-color: black; 
+    color: silver;
+    text-shadow: 0 0 1px white;
+    
   }
 h1 {
   font-style: italic;
   font-family: 'Allura', cursive;
   letter-spacing: 3px;
-  font-size: 24px;
+  font-size: 22px;
   
   
 }
 h2, h3 {
-  
   font-family: 'Allura', cursive;
   letter-spacing: 3px;
-  
+  margin: 15px 0 10px 0;
+}
 
+ul {
+  list-style-type: circle; /* Options: disc, circle, square, none */
+}
+
+section {
+  opacity: 0; /* Initially hidden */
+  transform: translateX(200px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+section.active {
+  opacity: 1; /* Make content visible */
+  transform: translateX(0); /* Slide in smoothly */
+}
+
+.card {
+  width: auto;
+  height: auto;
+  padding: 20px;
+  border-radius: 30px;
+  background: #000000;
+  margin: 3rem 0;
+  box-shadow: 15px 15px 30px rgba(50, 5, 99, 0.427),
+              -15px -15px 30px rgb(64, 0, 109);
+ }
+
+
+.combined-hr {
+  border: none;
+  border-radius: 10px;
+  height: 1px;
+  background: linear-gradient(to right, #ff4141, #c300ff, #4704ff); 
+  background-size: 200% 100%; 
+  animation: moveGradient 3s infinite linear, pulseGlow 1.5s infinite alternate; 
+  box-shadow: 0 0 10px 2px #ffffff; 
+}
+
+
+@keyframes moveGradient {
+  0% {
+      background-position: -200% 0;
+  }
+  100% {
+      background-position: 200% 0;
+  }
+}
+
+
+@keyframes pulseGlow {
+  0% {
+      box-shadow: 0 0 10px 2px #f70303;
+  }
+  50% {
+      box-shadow: 0 0 10px 2px #e500fe;
+  }
+  100% {
+      box-shadow: 0 0 20px 5px #4000ff;
+  }
 }
 
 
 
   .sidebar {
     margin: 0;
-    width: 120px;
+    width: 7.5rem;
     background: transparent;
     position: fixed;
     height: 100%;
@@ -63,41 +123,10 @@ h2, h3 {
   }
   
   #main {
-    margin: 0 8vw 0 18vw;
+    margin: 0 5rem 0 10rem;
     padding: 16px;
   }
   
-
-
-  @media only screen and (max-width: 600px) {
-
-    .sidebar {
-      position: relative;
-      width: 100%;
-      height: auto;
-      display: flex;
-      justify-content: space-around;
-      padding: 0;
-    }
-  
-    .sidebar img {
-      display: none;
-    }
-
-    .sidebar i {
-        display: none;
-      }
-  
-    .sidebar a {
-      font-size: 16px;
-      padding: 12px;
-    }
-  
-    #main {
-      margin-left: 1vw;
-    }
-  }
-
   .center {
     text-align: center;
     padding: 32px;
@@ -112,7 +141,8 @@ h2, h3 {
         linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
     background-size: 55px 55px;
   }
-  
+
+
  /* button From Uiverse.io by rubyreapergaming begin*/ 
 
 @import url("s://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
@@ -313,101 +343,54 @@ strong {
 
 /*button end */
   
-  .skills {
-    background-color: white;
-    height: 28px;
-    max-width: 800px;
-    overflow: hidden;
-  }
+.icon-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin: 2rem;
+}
+.icon {
+  font-size: 3rem; /* Adjust size */
+}
+.icon-label {
+  margin-top: 10px;
+  font-size: 1rem;
+}
   
-  .skill-bar {
-    background-color: darkgrey;
-    height: 28px;
-    transition: width 5s ease-in-out;
-  }
-  
-   /* Use keyframes for animations */
-   @keyframes fill {
-    from {
-    width: 0;
-    }
-    to {
-     /* Full width on animation completion */
-    }
-   }
-
-   /* Apply animation to the skill bars */
-  .skill-bar, hr {
-    animation: fill 2s forwards;
-  }
-
-  .text-grey {
-    color: grey;
-    
-  
-  }
-  
-  .text-light-grey {
+  .text-var {
     color: lightgrey;
     font-variant: small-caps;
     
   }
+
+
+
+  i {
+    z-index: 2;
+    font-family: "Orbitron", sans-serif;
+    font-size: 12px;
+    color: white;
+    
+  }
+
+  .auto{
+    width: auto;
+  }
   
-  .wide {
-    width: 100%;
-  }
-  
-
-/* Combined Animated Gradient and Pulse HR */
-.combined-hr {
-  border: none;
-  border-radius: 10px;
-  height: 1px; /* Line thickness */
-  background: linear-gradient(to right, #ff4141, #c300ff, #4704ff); /* Gradient colors */
-  background-size: 200% 100%; /* Allow the gradient to move */
-  animation: moveGradient 3s infinite linear, pulseGlow 1.5s infinite alternate; /* Combine two animations */
-  box-shadow: 0 0 10px 2px #ffffff; /* Initial glow */
-}
-
-/* Gradient movement animation */
-@keyframes moveGradient {
-  0% {
-      background-position: 200% 0;
-  }
-  100% {
-      background-position: -200% 0;
-  }
-}
-
-/* Pulse glow animation */
-@keyframes pulseGlow {
-  0% {
-      box-shadow: 0 0 10px 2px #f70303;
-  }
-  50% {
-      box-shadow: 0 0 10px 2px #e500fe;
-  }
-  100% {
-      box-shadow: 0 0 20px 5px #4000ff;
-  }
-}
-
-
   .form-input {
+    z-index: 2;
     width: 100%;
     max-width: 600px;
     margin-bottom: 16px;
     font-family: "Orbitron", sans-serif;
-    font-size: 12px;
-    letter-spacing: 3px;
-    color: white;
-   
-  }
-  
- 
-  
-  .social-icons {
     font-size: 16px;
+    letter-spacing: 3px;
+    border-width: 2px;
+  }
+
+  .social-icons {
+    font-size: 12px;
   }
   
   .social-icons i {
@@ -417,9 +400,41 @@ strong {
   
   .social-icons i:hover {
     opacity: 0.7;
-    border: double 4px #631e29;
+    border: outset 4px #631e29;
     background-origin: border-box;
-    background-clip: content-box, border-box;
-    animation: none;
+    
   }
   
+
+
+  @media only screen and (max-width: 600px) {
+
+    .sidebar {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+    }
+  
+    .sidebar img {
+      display: none;
+    }
+
+    .sidebar i {
+        display: none;
+      }
+  
+    .sidebar a {
+      font-size: 16px;
+      padding: 12px;
+    }
+  
+    #main {
+      margin: 0 2rem 0 2rem;
+    }
+  }
+
+  
+ 
