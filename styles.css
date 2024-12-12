@@ -27,7 +27,7 @@ ul {
 
 section {
   opacity: 0; /* Initially hidden */
-  transform: translateX(200px);
+  transform: translateX(100vw);
   transition: opacity 1s ease, transform 1s ease;
 }
 
